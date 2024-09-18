@@ -7,10 +7,9 @@
 </script>
 
 
-
     <header>
         <div class="container">
-            <p class="logo"> <img src="Logo_sin_fondito.png" height="50px" width="350"></p>
+            <p class="logo"> <img src="Logo sin fondito.png" height="50px" width="350"></p>
 
             <nav>
                 <a href="#somos-proya">¿Que hacemos?</a>
@@ -45,20 +44,18 @@
                     <h3>Generos variados </h3>
                     <br>
                     <p>Tendremos amplia variedad de generos ya que personas subiran sus historias y pondran mas generos.</p>
-                    <button id="miBoton" onclick = {()=> !contenedor}>
+                    <button id="miBoton">
                         + Info
                     </button>
-                    {#if !contenedor}
-                        <div id="contenedorTexto" style="display: none;">
-                            <p id="miParrafo" style="float: left;">Generos: <br>
-                                -Fantansia.
-                                <br>
-                                -Terror.
-                                <br>
-                                -Aventura
-                            </p>
-                        </div>
-                    {/if}
+                    <div id="contenedorTexto" style="display: none;">
+                        <p id="miParrafo" style="float: left;">Generos: <br>
+                            -Fantansia.
+                            <br>
+                            -Terror.
+                            <br>
+                            -Aventura
+                        </p>
+                    </div>
                 </div>
                 <div class="carta">
                     <h3>Actividades dinamimcas</h3>
@@ -117,18 +114,12 @@
             <p>&copy; Short Histories 2024</p>
         </div>
     </footer>
-
-
-
+    
 <style>
     *{
     box-sizing: border-box; 
 }
 
-body{
-    font-family: "Noto Serif", serif;
-    margin: 0;
-}
 
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
