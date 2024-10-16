@@ -1,50 +1,194 @@
+<script>
+	import { goto } from '$app/navigation';
+	let contenedor = $state(false);
+	let muestra = $state(false);
+</script>
 
-    <div class="container-form register">
-        <div class="information">
-            <div class="info-childs">
-                <h2>Short Histories</h2>
-                <p>!Bienvenido¡ Para unirte a nuestra comunidad por favor inicia sesión con tus datos</p>
-                <a href="4.registro.html"><input type="submit" value="Registrarse" id="sign-up"></a>
-            </div>
-        </div>
-        <div class="form-information">
-            <div class="form-information-childs">
-                <h2>Crear una Cuenta</h2>
-                <div class="icons">
-                    <i class='bx bxl-google'></i>
-                    <i class='bx bxl-github'></i>
-                    <i class='bx bxl-linkedin' ></i>
-                </div>
-                <p>o usa tu email para registrarte</p>
-                <form class="form form-register" novalidate>
-                    <div>
-                        <label>
-                            <i class='bx bx-user' ></i>
-                            <input type="text" placeholder="Nombre Usuario" name="userName" >
-                        </label>
-                    </div>
-                    <div>
-                        <label >
-                            <i class='bx bx-envelope' ></i>
-                            <input type="email" placeholder="Correo Electronico" name="userEmail" >
-                        </label>
-                    </div>
-                   <div>
-                        <label>
-                            <i class='bx bx-lock-alt' ></i>
-                            <input type="password" placeholder="Contraseña" name="userPassword">
-                        </label>
-                   </div>
+<div class="container-form register">
+	<div class="information">
+		<div class="info-childs">
+			<h2>Short Histories</h2>
+			<p>!Bienvenido¡ Para unirte a nuestra comunidad por favor inicia sesión con tus datos</p>
+			<button onclick={() => goto('/Registro')}>Registrate</button>
+		</div>
+	</div>
+	<div class="form-information">
+		<div class="form-information-childs">
+			<h2>Entra a tu Cuenta</h2>
+			
+			<p>o usa tu email para registrarte</p>
+			<form class="form form-register" novalidate>
+				<div>
+					<label>
+						<i class="bx bx-user"></i>
+						<input type="text" placeholder="Nombre Usuario" name="userName" />
+					</label>
+				</div>
+				<div>
+					<label>
+						<i class="bx bx-envelope"></i>
+						<input type="email" placeholder="Correo Electronico" name="userEmail" />
+					</label>
+				</div>
+				<div>
+					<label>
+						<i class="bx bx-lock-alt"></i>
+						<input type="password" placeholder="Contraseña" name="userPassword" />
+					</label>
+				</div>
 
-                    <input type="submit" value="Iniciar Sesión">
-                    <div class="alerta-error">Todos los campos son obligatorios</div>
-                    <div class="alerta-exito">Te registraste correctamente</div>
-                </form>
-            </div>
-        </div>
-    </div>
+				<button onclick={()=> goto("/Libros")}>Iniciar Sesion</button>
+			</form>
+		</div>
+	</div>
+</div>
 
-    <script src="1.InicioSesion.js"></script>
-    <section id="final">
-        
-    </section>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.container-form {
+		display: flex;
+		border-radius: 20px;
+		box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+		height: 500px;
+		max-width: 900px;
+		transition: all 1s ease;
+		margin: 10px;
+	}
+
+	.information {
+		width: 40%;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		background-color: #c7eef3;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+
+	.info-childs {
+		width: 100%;
+		padding: 0 30px;
+	}
+
+	.info-childs h2 {
+		font-size: 2.5rem;
+		color: #333;
+	}
+
+	.info-childs p {
+		margin: 15px 0;
+		color: #555;
+	}
+
+
+	.form-information {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60%;
+		text-align: center;
+		background-color: #f8f8f8;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+
+	.form-information-childs {
+		padding: 0 30px;
+	}
+
+	.form-information-childs h2 {
+		color: #333;
+		font-size: 2rem;
+	}
+
+	.form-information-childs p {
+		color: #555;
+	}
+
+	.icons {
+		margin: 15px 0;
+	}
+
+	.icons i {
+		border-radius: 50%;
+		padding: 15px;
+		cursor: pointer;
+		margin: 0 10px;
+		color: #9191bd;
+		border: solid thin #9191bd;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.icons i:hover {
+		background-color: #646485;
+		color: #fff;
+	}
+
+	.form {
+		margin: 30px 0 0 0;
+	}
+
+	.form label {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+		border-radius: 20px;
+		padding: 0 10px;
+		background-color: #fff;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.form label input {
+		width: 100%;
+		padding: 10px;
+		background-color: #fff;
+		border: none;
+		outline: none;
+		border-radius: 20px;
+		color: #333;
+	}
+
+	.form label i {
+		color: #a7a7a7;
+	}
+
+	/*PERSONALIZACION DE ALERTAS Y MENSAJES */
+
+	
+
+	/*RESPONSIVE FORM*/
+
+	
+
+	@media screen and (max-width: 580px) {
+
+		.container-form {
+			height: auto;
+			width: 80%;
+			flex-direction: column;
+		}
+
+		.information {
+			width: 100%;
+			padding: 40px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0;
+		}
+
+		.form-information {
+			width: 100%;
+			padding: 20px;
+			border-bottom-left-radius: 20px;
+			border-top-right-radius: 0;
+		}
+	}
+</style>
