@@ -77,64 +77,7 @@
 {/if}
 
 <style>
-
-	.
-
-
-
-	.info-cart-product {
-		display: flex;
-		justify-content: space-between;
-		flex: 0.8;
-	}
-
-	.titulo-producto-carrito {
-		font-size: 20px;
-	}
-
-	.precio-producto-carrito {
-		font-weight: 700;
-		font-size: 20px;
-		margin-left: 10px;
-	}
-
-	.cantidad-producto-carrito {
-		font-weight: 400;
-		font-size: 20px;
-	}
-
-	.icon-close {
-		width: 25px;
-		height: 25px;
-	}
-
-	.icon-close:hover {
-		stroke: red;
-		cursor: pointer;
-	}
-
-	.cart-total {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px 0;
-		gap: 20px;
-	}
-
-	.cart-total h3 {
-		font-size: 20px;
-		font-weight: 700;
-	}
-
-	.total-pagar {
-		font-size: 20px;
-		font-weight: 900;
-	}
-
-	.hidden-cart {
-		display: none;
-	}
-
+	
 	.container-items {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -171,11 +114,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-	}
-
-	.price {
-		font-size: 18px;
-		font-weight: 900;
 	}
 
 	.info-product button {
@@ -215,3 +153,4 @@
 		font-weight: bold;
 	}
 </style>
+

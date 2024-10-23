@@ -1,3 +1,11 @@
+<svelte:head>
+	<meta charset="UTF-8">
+
+    <title>Short Histories!</title>
+
+</svelte:head>
+
+
 <script>
 	import { goto } from '$app/navigation';
 	import Logo from './Logo_sin_fondito.png';
