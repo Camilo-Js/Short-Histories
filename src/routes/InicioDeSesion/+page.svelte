@@ -1,5 +1,5 @@
 <script>
-	import { goto } from '$app/navigation';
+	import { goto } from "$app/navigation";
 	let contenedor = $state(false);
 	let muestra = $state(false);
 </script>
@@ -17,7 +17,7 @@
 			<h2>Entra a tu Cuenta</h2>
 			
 			<p>o usa tu email para registrarte</p>
-			<form class="form form-register" novalidate>
+			<form action='?/inicioSesion' method="post" class="form form-register">
 				<div>
 					<label>
 						<i class="bx bx-user"></i>
@@ -36,8 +36,7 @@
 						<input type="password" placeholder="Contraseña" name="userPassword" />
 					</label>
 				</div>
-
-				<button onclick={()=> goto("/Libros")}>Iniciar Sesion</button>
+				<button>Iniciar Sesion</button>
 			</form>
 		</div>
 	</div>
