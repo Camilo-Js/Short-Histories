@@ -17,24 +17,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Sign in & Sign up Form</title>
+    <title>Inicio de Sesion</title>
   </svelte:head>
   
   <div class="body">
     <div class="container" class:sign-up-mode={signUpMode}>
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action='?/inicioSesionn' method="post" class="sign-in-form">
             <h2 class="title">Iniciar Sesion</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Usuario" />
+              <input type="text" placeholder="Usuario" name="UserName"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input type="password" placeholder="Contraseña" name="UserPassword"/>
             </div>
-            <input type="submit" value="Iniciar sesion " class="btn solid" />
+            <input type="submit" value="Iniciar sesion" class="btn solid" />
             <p class="social-text">O Inicia con estas plataformas:</p>
             <div class="social-media">
               <a href="#" class="social-icon">

@@ -32,7 +32,7 @@
 
 <section id="hero">
 	<h1>¿Quieres empezar a leer <br />nuestras historias cortas?</h1>
-	<button onclick={()=>goto('/InicioDeSesion')}>Empieza aquí </button>
+	<button onclick={()=>goto('/InicioSesion')}>Empieza aquí </button>
 </section>
 
 <section id="somos-proya">
@@ -98,7 +98,7 @@
 						<p id="miParrafo" style="float: left;">
 							Puedes tener acceso a algunas historias entrando a:
 							<br />
-							<button onclick={()=>goto("/InicioDeSesion")}>Entra aquí</button>
+							<button onclick={()=>goto("/InicioSesion")}>Entra aquí</button>
 						</p>
 					</div>
 				{/if}
